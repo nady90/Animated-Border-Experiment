@@ -1,0 +1,48 @@
+.card-2 {
+  color: white;
+  font-family: sans-serif;
+
+  // border: 5px solid gold;
+  background-color: black;
+  height: 55vh;
+  aspect-ratio: 1/1.5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: -5px;
+    background: linear-gradient(
+      45deg,
+      red,
+      orange,
+      yellow,
+      green,
+      blue,
+      black,
+      gray,
+      red
+    );
+    background-size: 400%;
+    z-index: -1;
+
+    animation: rotating-border 10s infinite forwards;
+  }
+}
+
+@keyframes rotating-border {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
