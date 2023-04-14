@@ -1,37 +1,54 @@
-.card-2 {
-  color: white;
-  font-family: sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+}
 
-  // border: 5px solid gold;
-  background-color: black;
-  height: 55vh;
-  aspect-ratio: 1/1.5;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.container {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: #252525;
   position: relative;
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    inset: -5px;
-    background: linear-gradient(
-      45deg,
-      red,
-      orange,
-      yellow,
-      green,
-      blue,
-      black,
-      gray,
-      red
-    );
-    background-size: 400%;
-    z-index: -1;
+  z-index: 1;
 
-    animation: rotating-border 10s infinite forwards;
+  .card-2 {
+    color: white;
+    font-family: sans-serif;
+
+    // border: 5px solid gold;
+    background-color: black;
+    height: 55vh;
+    aspect-ratio: 1/1.5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: -5px;
+      background: linear-gradient(
+        45deg,
+        red,
+        orange,
+        yellow,
+        gold,
+        yellow,
+        rgb(187, 255, 0),
+        rgb(43, 87, 45),
+        rgb(46, 43, 87),
+        rgb(82, 43, 87),
+        red
+      );
+      background-size: 400%;
+      z-index: -1;
+
+      // animation: rotating-border 10s infinite forwards;
+      animation: rotating-border 10s infinite;
+    }
   }
 }
 
